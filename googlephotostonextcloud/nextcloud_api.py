@@ -42,7 +42,7 @@ class NextCloudAPI:
         return process.stdout.decode()
     
     def run_occs(self, commands):
-        command = commands.join(" ; ")
+        command = " ; ".join(commands)
         full_command = self.occ_cmd(command)
         # print(full_command)
         

@@ -1,7 +1,6 @@
 # GooglePhotosToNextCloud
 
 ![googlephotostonextcloud](https://badge.fury.io/py/googlephotstonextcloud.png)
-![build](https://travis-ci.org/marcbenedi/googlephotostonextcloud.png?branch=master)
 
 Python tool to migrate Google Photos Takout to NextCloud Photos
 
@@ -16,12 +15,17 @@ Python tool to migrate Google Photos Takout to NextCloud Photos
 
 ## Steps
 
-1. Request Google Takout of Photos
-2. Upload takout the nextcloud (will take forever)
-3. Extract using https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper?tab=readme-ov-file#running-manually-with-cmd
-4. Use script to convert processed takout to Photos Nextcloud
-5. Remove remaining shit
-6. occ scann files
+1. Use [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper?tab=readme-ov-file#running-manually-with-cmd) to get your Google Takout and apply all the metadata.
+
+```bash
+gpth -i <dir containing Takout folder> -o gpth_out --albums=json --no-divide-to-dates
+```
+
+2. Upload Takout to NextCloud (it will take a long time. Optionally, you can upload the raw Takout to NextCloud and  then execute the `gpth` command on the server).
+
+3. Use our tool to create the Albums and add the pictures
+
 
 ## Configuration
 
+The configuration parameters can be found at `config.py`. The documentation can also found there.
