@@ -1,5 +1,4 @@
 import json
-from getpass import getpass
 from tqdm import tqdm
 
 from googlephotostonextcloud.nextcloud_api import NextCloudAPI
