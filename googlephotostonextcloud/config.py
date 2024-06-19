@@ -1,7 +1,7 @@
 import os
 from getpass import getpass
 
-NC_URL: str = "https://nextcloudaio.homelab.marcb.pro"
+NC_URL: str = "https://<your homelab url>"
 NC_USER: str = "marc"
 NC_PASS: str = os.getenv('NC_PASS') if os.getenv('NC_PASS') else getpass('Enter NC_PASS: ')
 # NC_PASS: str = ""
