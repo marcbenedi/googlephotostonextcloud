@@ -5,6 +5,11 @@ NC_URL: str = "https://<your homelab url>"
 NC_USER: str = "marc"
 NC_PASS: str = os.getenv('NC_PASS') if os.getenv('NC_PASS') else getpass('Enter NC_PASS: ')
 # NC_PASS: str = ""
+# Note: NC_PASS is an app password for WebDAV access. It is NOT your nexcloud login and NOT your server ssh password.
+# See: https://docs.nextcloud.com/server/19/user_manual/files/access_webdav.html#app-passwords
+# "Nextcloud supports generating unquie application password separate from your user login. "
+# "If you are using a 3rd party authenication provider you will need to generate an application "
+# "password for WebDAV. In Nextcloud’s web GUI, go to the user preferences, go to Security. Generate an App password. "
 
 # Location of the Google Photos Takeout Helper folder in Nextcloud
 GPTH_PATH: str = "gpth_out"
